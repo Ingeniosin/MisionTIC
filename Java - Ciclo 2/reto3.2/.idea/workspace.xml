@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c0f52417-84aa-4846-b16d-b1e1bb63337b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../reto1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto1/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto1/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto1/reto1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto1/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/reto2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/src/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto2/src/SchoolGradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/reto3.1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/src/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/src/entity/Nota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/src/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/src/services/GradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto3.1/src/services/SchoolGradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/JavaFX.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reto3.2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/entity/Nota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/screen/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/services/GradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/services/SchoolGradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/utils/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reto3/utils/Screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/libraries/JavaFX.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/libraries/SQLLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/libs/sqlite-jdbc-3.36.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/reto4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/GradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/SchoolGradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/Ventana.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database/SQLite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database/repository/EstudianteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database/repository/MateriaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database/repository/NotaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/database/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/entity/Estudiante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/entity/Generos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/entity/Materia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/entity/Nota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/screen/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/screen/Screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/service/EstudianteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/service/MateriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/service/NotaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/view/Pane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/view/PrincipalScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/view/pane/DataPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/view/pane/ProcesarPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto4/src/reto4/view/pane/QueryPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/reto5.1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/src/GradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/src/Nota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/src/SchoolGradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.1/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/libraries/JavaFX.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/DIAGRAMA_UML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/reto5.2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/entity/Nota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/screen/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/services/GradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/services/SchoolGradingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/utils/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5.2/src/reto5/utils/Screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reto5/reto5.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1x6Vi2nh2m7LJ1y66ZCS7CYxGdy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15955766" />
+    <property name="project.structure.side.proportion" value="0.44465116" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan David\Desktop\My Project Files\MisionTIC\Java - Ciclo 2\reto3.2\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="reto3.App" />
+      <module name="reto3.2" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files (x86)\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="reto3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0f52417-84aa-4846-b16d-b1e1bb63337b" name="Changes" comment="" />
+      <created>1629675649864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629675649864</updated>
+      <workItem from="1629675651321" duration="142000" />
+      <workItem from="1629675900965" duration="424000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
