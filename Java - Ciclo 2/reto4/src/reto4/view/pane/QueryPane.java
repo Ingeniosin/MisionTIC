@@ -46,8 +46,8 @@ public class QueryPane implements Pane {
         NotaService notaService = App.getNotaService();
 
         this.btnEliminar.addEventHandler(EventType.ROOT, e -> {
-            if(e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
-                if(txtNombre.getText() != null && txtNombre.getText().isEmpty()) txtNombre.setText(null);
+            if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+                if (txtNombre.getText() != null && txtNombre.getText().isEmpty()) txtNombre.setText(null);
                 setDisable(true);
                 try {
                     String consultaPrevia = consultar(txtNombre, selectMateria);
@@ -58,7 +58,7 @@ public class QueryPane implements Pane {
                     Materia materia = hasMateriaSelected ? materiaService.getByName(materiaSelected).orElseThrow() : null;
                     boolean hasEstudiante = estudiante != null, hasMateria = materia != null;
 
-                    if(hasEstudiante && hasMateria) {
+                    if (hasEstudiante && hasMateria) {
                         Predicate<Nota> notaPredicate = nota -> nota.getMateria().getNombre().equalsIgnoreCase(materiaSelected);
                         for (Nota n : estudiante.getNotas()) {
                             if (notaPredicate.test(n)) {
@@ -69,7 +69,7 @@ public class QueryPane implements Pane {
                     } else if (hasEstudiante) {
                         estudianteService.remove(estudiante.getId());
                         consulta.append("  ● Se elimino el registro y notas totales del estudiante con id: ").append(estudiante.getId()).append(", nombre: ").append(estudiante.getNombre());
-                    } else if(hasMateria) {
+                    } else if (hasMateria) {
                         materiaService.remove(materia.getId());
                         consulta.append("  ● Se eliminaron todos los registros de la materia con id: ").append(materia.getId()).append(", nombre: ").append(materia.getNombre());
                     } else {
@@ -84,22 +84,22 @@ public class QueryPane implements Pane {
                     this.txtresponse.setText(consulta.toString());
 
                 } catch (Exception ex) {
-                    setMessage(false, "Ocurrió un error: "+ex.getMessage());
+                    setMessage(false, "Ocurrió un error: " + ex.getMessage());
                 }
                 setDisable(false);
             }
         });
 
         this.btnConsultar.addEventHandler(EventType.ROOT, e -> {
-            if(e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
-                if(txtNombre.getText() != null && txtNombre.getText().isEmpty()) txtNombre.setText(null);
+            if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+                if (txtNombre.getText() != null && txtNombre.getText().isEmpty()) txtNombre.setText(null);
                 setDisable(true);
                 try {
                     long time = System.currentTimeMillis();
                     this.txtresponse.setText(consultar(txtNombre, selectMateria));
-                    setMessage(true, "Se realizo la consulta con exito en: "+(System.currentTimeMillis()-time)+" ms");
+                    setMessage(true, "Se realizo la consulta con exito en: " + (System.currentTimeMillis() - time) + " ms");
                 } catch (Exception ex) {
-                    setMessage(false, "Ocurrió un error: "+ex.getMessage());
+                    setMessage(false, "Ocurrió un error: " + ex.getMessage());
                 }
                 setDisable(false);
             }
@@ -112,14 +112,14 @@ public class QueryPane implements Pane {
         List<String> materias = App.getMateriaService().getMateriasCapitalize();
         materias.add("Ninguna");
         selectMateria.setItems(FXCollections.observableList(materias));
-        selectMateria.setValue(materias.isEmpty() ? null : materias.get(materias.size()-1));
+        selectMateria.setValue(materias.isEmpty() ? null : materias.get(materias.size() - 1));
     }
 
     private String consultar(TextField txtNombre, ChoiceBox<String> selectMateria) throws Exception {
         EstudianteService estudianteService = App.getEstudianteService();
         String materiaSelected = selectMateria.getValue();
         StringBuilder stringBuilder = new StringBuilder();
-        if(txtNombre.getText() == null && materiaSelected.equalsIgnoreCase("ninguna")) {
+        if (txtNombre.getText() == null && materiaSelected.equalsIgnoreCase("ninguna")) {
             stringBuilder.append("LISTA DE TODOS LOS ESTUDIANTES:").append("\n");
             estudianteService.getAll().forEach(e -> stringBuilder.append("  ● Nombre ").append(e.getNombre()).append("  |  Genero: ").append(e.getGenero()).append("  |  Id: ").append(e.getId()).append("\n"));
             stringBuilder.append("\n");
@@ -131,14 +131,16 @@ public class QueryPane implements Pane {
         String nombre = estudiante != null ? estudiante.getNombre() : txtNombre.getText();
         boolean hasEstudiante = estudiante != null;
 
-        if(hasName && hasMateria) stringBuilder.append("REGISTROS ENCONTRADOS RELACIONADOS CON EL ESTUDIANTE ").append(nombre).append(" Y LA MATERIA ").append(materiaSelected);
-        else if(hasName) stringBuilder.append("REGISTROS ENCONTRADOS RELACIONADOS CON EL ESTUDIANTE ").append(nombre);
-        else if (hasMateria) stringBuilder.append("REGISTROS ENCONTRADOS RELACIONADOS LA ASIGNATURA ").append(materiaSelected);
+        if (hasName && hasMateria)
+            stringBuilder.append("REGISTROS ENCONTRADOS RELACIONADOS CON EL ESTUDIANTE ").append(nombre).append(" Y LA MATERIA ").append(materiaSelected);
+        else if (hasName) stringBuilder.append("REGISTROS ENCONTRADOS RELACIONADOS CON EL ESTUDIANTE ").append(nombre);
+        else if (hasMateria)
+            stringBuilder.append("REGISTROS ENCONTRADOS RELACIONADOS LA ASIGNATURA ").append(materiaSelected);
 
         stringBuilder.append("\n \n");
-        if(hasName) {
+        if (hasName) {
             stringBuilder.append("INFORMACIÓN DEL ESTUDIANTE:").append("\n");
-            if(hasEstudiante)
+            if (hasEstudiante)
                 stringBuilder.append("  ● Nombre: ").append(nombre).append("\n").append("  ● Genero: ").append(estudiante.getGenero()).append("\n")
                         .append("  ● ID: ").append(estudiante.getId()).append("\n \n");
             else {
@@ -148,13 +150,14 @@ public class QueryPane implements Pane {
         }
 
         Predicate<Nota> notaPredicate = nota -> !hasMateria || nota.getMateria().getNombre().equalsIgnoreCase(materiaSelected);
-        List<Nota> notas = hasEstudiante ? estudiante.getNotas().stream().filter(notaPredicate).collect(Collectors.toList())  : App.getNotaService().getAll().stream().filter(notaPredicate).collect(Collectors.toList());
+        List<Nota> notas = hasEstudiante ? estudiante.getNotas().stream().filter(notaPredicate).collect(Collectors.toList()) : App.getNotaService().getAll().stream().filter(notaPredicate).collect(Collectors.toList());
 
-        stringBuilder.append("INFORMACIÓN CALIFICACIONES ").append(hasEstudiante ? "DE '"+estudiante.getNombre()+"' " : "DE TODOS LOS ESTUDIANTES").append(hasMateria ? " (" + materiaSelected + ")" : "").append(": ").append("\n");
-        if(!notas.isEmpty())
+        stringBuilder.append("INFORMACIÓN CALIFICACIONES ").append(hasEstudiante ? "DE '" + estudiante.getNombre() + "' " : "DE TODOS LOS ESTUDIANTES").append(hasMateria ? " (" + materiaSelected + ")" : "").append(": ").append("\n");
+        if (!notas.isEmpty())
             notas.forEach(nota -> {
                 stringBuilder.append("  ● Calificacion: ").append(nota.getNota()).append("   |   Materia: ").append(nota.getMateria().getNombre());
-                if(!hasEstudiante) stringBuilder.append("   |   Estudiante: ").append(nota.getEstudiante().getNombre());
+                if (!hasEstudiante)
+                    stringBuilder.append("   |   Estudiante: ").append(nota.getEstudiante().getNombre());
                 stringBuilder.append("\n");
             });
         else stringBuilder.append("  ● No se encontró ninguna nota");
@@ -171,7 +174,7 @@ public class QueryPane implements Pane {
                 currentRunnable = this;
                 try {
                     Thread.sleep(1000 * 8);
-                    if(currentRunnable != this) return;
+                    if (currentRunnable != this) return;
                     labelMessage3.setVisible(false);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

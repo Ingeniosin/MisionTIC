@@ -9,8 +9,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import reto4.App;
 import reto4.SchoolGradingSystem;
-import reto4.entity.Estudiante;
-import reto4.entity.Materia;
 import reto4.view.Pane;
 
 import java.sql.SQLException;
@@ -20,12 +18,10 @@ import java.util.stream.Collectors;
 
 public class ProcesarPane implements Pane {
 
-    private AnchorPane div;
-
     private final TextArea txtCargar, txtProceso;
     private final Button btnReiniciar, btnProcesar;
-    private final  Label labelMessage2;
-
+    private final Label labelMessage2;
+    private final AnchorPane div;
     private Runnable currentRunnable;
 
     public ProcesarPane(AnchorPane div, TextArea txtCargar, TextArea txtProceso, Button btnProcesar, Label labelMessage2, Button btnReiniciar) {
@@ -37,28 +33,26 @@ public class ProcesarPane implements Pane {
         this.btnReiniciar = btnReiniciar;
         onReset();
 
-        this.btnReiniciar.addEventHandler(EventType.ROOT, e ->{
-            if(e.getEventType().equals(MouseEvent.MOUSE_CLICKED))
+        this.btnReiniciar.addEventHandler(EventType.ROOT, e -> {
+            if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED))
                 onReset();
         });
 
-
-
         this.btnProcesar.addEventHandler(EventType.ROOT, e -> {
-            if(e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+            if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
                 setDisable(true);
                 labelMessage2.setVisible(false);
                 try {
                     long time = System.currentTimeMillis();
                     SchoolGradingSystem schoolGradingSystem = new SchoolGradingSystem(App.getEstudianteService().getAll(), App.getMateriaService().getMaterias());
                     schoolGradingSystem.loadData(readData());
-                    this.txtProceso.setText(schoolGradingSystem.stat1()+"\n"+schoolGradingSystem.stat2()+"\n"+schoolGradingSystem.stat3()+"\n"+schoolGradingSystem.stat4());
-                    setMessage(true, "Se realizo la consulta y el calculo correctamente en "+(System.currentTimeMillis()-time)+" ms");
+                    this.txtProceso.setText(schoolGradingSystem.stat1() + "\n" + schoolGradingSystem.stat2() + "\n" + schoolGradingSystem.stat3() + "\n" + schoolGradingSystem.stat4());
+                    setMessage(true, "Se realizo la consulta y el calculo correctamente en " + (System.currentTimeMillis() - time) + " ms");
                 } catch (SQLException ex) {
                     ex.printStackTrace();
-                    setMessage(false, "Ocurrio un error en la base de datos: "+ex.getMessage());
+                    setMessage(false, "Ocurrio un error en la base de datos: " + ex.getMessage());
                 } catch (NullPointerException ex) {
-                    setMessage(false, "No se encontro un valor o es invalido, revisa los IDs estudiante y notas: linea "+ex.getMessage());
+                    setMessage(false, "No se encontro un valor o es invalido, revisa los IDs estudiante y notas: linea " + ex.getMessage());
                 }
                 setDisable(false);
             }
@@ -75,7 +69,7 @@ public class ProcesarPane implements Pane {
                 currentRunnable = this;
                 try {
                     Thread.sleep(1000 * 8);
-                    if(currentRunnable != this) return;
+                    if (currentRunnable != this) return;
                     labelMessage2.setVisible(false);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -91,7 +85,7 @@ public class ProcesarPane implements Pane {
     }
 
     private List<String> readData() {
-       return Arrays.stream(txtCargar.getText().split("\n")).collect(Collectors.toList());
+        return Arrays.stream(txtCargar.getText().split("\n")).collect(Collectors.toList());
     }
 
     @Override

@@ -17,26 +17,40 @@ import java.io.IOException;
 
 public class PrincipalScreen extends Screen {
 
-    @FXML private Button btnData, btnEliminar, btnProcesar;
-    @FXML private AnchorPane divData, divEliminar, divProcesar;
+    @FXML
+    private Button btnData, btnEliminar, btnProcesar;
+    @FXML
+    private AnchorPane divData, divEliminar, divProcesar;
 
     //1
-    @FXML private TextField txtName, txtNota;
-    @FXML private Label labelMessage;
-    @FXML private Button btnGuardar;
-    @FXML private ChoiceBox<String> selectMateria, selectGenero;
+    @FXML
+    private TextField txtName, txtNota;
+    @FXML
+    private Label labelMessage;
+    @FXML
+    private Button btnGuardar;
+    @FXML
+    private ChoiceBox<String> selectMateria, selectGenero;
 
     //2
-    @FXML private TextArea txtCargar2, txtProceso2;
-    @FXML private Button btnProcesar2, btnReiniciar;
-    @FXML private Label labelMessage2;
+    @FXML
+    private TextArea txtCargar2, txtProceso2;
+    @FXML
+    private Button btnProcesar2, btnReiniciar;
+    @FXML
+    private Label labelMessage2;
 
     //3
-    @FXML private TextField txtNombre3;
-    @FXML private TextArea txtResponse3;
-    @FXML private Button btnConsultar3, btnEliminar3;
-    @FXML private ChoiceBox<String> selectMateria3;
-    @FXML private Label labelMessage3;
+    @FXML
+    private TextField txtNombre3;
+    @FXML
+    private TextArea txtResponse3;
+    @FXML
+    private Button btnConsultar3, btnEliminar3;
+    @FXML
+    private ChoiceBox<String> selectMateria3;
+    @FXML
+    private Label labelMessage3;
 
 
     private Pane currentPane;
@@ -50,7 +64,7 @@ public class PrincipalScreen extends Screen {
     }
 
     public void setCurrentContent(Pane pane) {
-        if(currentPane != null && currentPane == pane) {
+        if (currentPane != null && currentPane == pane) {
             pane.onReset();
             return;
         }
@@ -61,7 +75,9 @@ public class PrincipalScreen extends Screen {
     }
 
     public void reset() {
-        divData.setVisible(false); divProcesar.setVisible(false); divEliminar.setVisible(false);
+        divData.setVisible(false);
+        divProcesar.setVisible(false);
+        divEliminar.setVisible(false);
     }
 
     @Override
@@ -74,6 +90,8 @@ public class PrincipalScreen extends Screen {
     }
 
     private void addContentListener(Button button, Pane pane) {
-        button.addEventHandler(EventType.ROOT, event -> {if(event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) setCurrentContent(pane);});
+        button.addEventHandler(EventType.ROOT, event -> {
+            if (event.getEventType().equals(MouseEvent.MOUSE_CLICKED)) setCurrentContent(pane);
+        });
     }
 }

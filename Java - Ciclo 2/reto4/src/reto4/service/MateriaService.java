@@ -1,6 +1,5 @@
 package reto4.service;
 
-import reto4.App;
 import reto4.database.repository.Repository;
 import reto4.entity.Materia;
 

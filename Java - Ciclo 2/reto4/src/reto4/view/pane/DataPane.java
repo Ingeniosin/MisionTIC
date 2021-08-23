@@ -12,16 +12,12 @@ import javafx.scene.paint.Color;
 import reto4.App;
 import reto4.entity.Estudiante;
 import reto4.entity.Generos;
-import reto4.entity.Materia;
 import reto4.entity.Nota;
 import reto4.view.Pane;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class DataPane implements Pane {
 
@@ -45,26 +41,26 @@ public class DataPane implements Pane {
         this.onReset();
 
         btnGuardar.addEventHandler(EventType.ROOT, e -> {
-            if(e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
+            if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)) {
                 setDisable(true);
                 txtMessage.setVisible(false);
-                if(txtName.getText() != null && txtName.getText().isEmpty()) txtName.setText(null);
-                if(txtNota.getText() != null && txtNota.getText().isEmpty()) txtNota.setText(null);
+                if (txtName.getText() != null && txtName.getText().isEmpty()) txtName.setText(null);
+                if (txtNota.getText() != null && txtNota.getText().isEmpty()) txtNota.setText(null);
                 try {
                     Objects.requireNonNull(txtName.getText(), "Campo nombre invalido");
                     Objects.requireNonNull(txtNota.getText(), "Campo nota invalido");
                     double nota = Double.parseDouble(txtNota.getText());
                     Estudiante estudianteNuevo = new Estudiante(txtName.getText().trim(), selectGenero.getValue()), estudianteAntiguo = App.getEstudianteService().getEstudiante(estudianteNuevo.getNombre());
-                    if(estudianteAntiguo != null) estudianteNuevo.getNotas().addAll(estudianteAntiguo.getNotas());
+                    if (estudianteAntiguo != null) estudianteNuevo.getNotas().addAll(estudianteAntiguo.getNotas());
                     estudianteNuevo.getNotas().add(new Nota(nota, App.getMateriaService().getByName(selectMateria.getValue()).orElseThrow()));
                     App.getEstudianteService().createOrUpdate(estudianteNuevo);
-                    setMessage(true, estudianteAntiguo != null ? "El registro del usuario de nombre "+estudianteAntiguo.getNombre()+" ya existía, se encontró y se añadió la nota correspondiente" : "El usuario "+estudianteNuevo.getNombre()+" se creo con exito!");
+                    setMessage(true, estudianteAntiguo != null ? "El registro del usuario de nombre " + estudianteAntiguo.getNombre() + " ya existía, se encontró y se añadió la nota correspondiente" : "El usuario " + estudianteNuevo.getNombre() + " se creo con exito!");
                 } catch (NullPointerException | SQLException ex) {
-                    setMessage(false, "Ocurrió un error: "+ex.getMessage());
+                    setMessage(false, "Ocurrió un error: " + ex.getMessage());
                 } catch (NumberFormatException ex) {
-                    setMessage(false, "Error al convertir los datos, el campo nota es invalido: "+ex.getMessage());
-                }  catch (Exception ex) {
-                    setMessage(false, "Error, los datos son invalidos "+ex.getMessage());
+                    setMessage(false, "Error al convertir los datos, el campo nota es invalido: " + ex.getMessage());
+                } catch (Exception ex) {
+                    setMessage(false, "Error, los datos son invalidos " + ex.getMessage());
                 }
                 setDisable(false);
             }
@@ -75,7 +71,7 @@ public class DataPane implements Pane {
     @Override
     public void onResume() {
         try {
-            List<String>  materias = App.getMateriaService().getMateriasCapitalize();
+            List<String> materias = App.getMateriaService().getMateriasCapitalize();
             selectMateria.setItems(FXCollections.observableList(materias));
             selectMateria.setValue(materias.isEmpty() ? null : materias.get(0));
         } catch (SQLException e) {
@@ -94,7 +90,7 @@ public class DataPane implements Pane {
                 currentRunnable = this;
                 try {
                     Thread.sleep(1000 * 8);
-                    if(currentRunnable != this) return;
+                    if (currentRunnable != this) return;
                     txtMessage.setVisible(false);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

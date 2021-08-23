@@ -2,9 +2,9 @@ package reto4.entity;
 
 public class Nota {
 
-    private Integer id;
     private final double nota;
     private final Materia materia;
+    private Integer id;
     private Estudiante estudiante;
 
 
@@ -12,6 +12,7 @@ public class Nota {
         this.nota = nota;
         this.materia = materia;
     }
+
     public Nota(double nota, Materia materia, Estudiante estudiante) {
         this.nota = nota;
         this.materia = materia;

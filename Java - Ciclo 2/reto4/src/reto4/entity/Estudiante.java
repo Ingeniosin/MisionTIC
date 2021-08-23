@@ -15,20 +15,10 @@ public class Estudiante {
         this.genero = genero;
     }
 
-    public Estudiante(String nombre, String genero, int id)  {
+    public Estudiante(String nombre, String genero, int id) {
         this.nombre = nombre;
         this.genero = genero;
         this.id = id;
-    }
-
-    public Estudiante setId(Integer id) {
-        this.id = id;
-        return this;
-    }
-
-    public Estudiante setNotas(List<Nota> notas) {
-        this.notas = notas;
-        return this;
     }
 
     public String getNombre() {
@@ -43,8 +33,18 @@ public class Estudiante {
         return id;
     }
 
+    public Estudiante setId(Integer id) {
+        this.id = id;
+        return this;
+    }
+
     public List<Nota> getNotas() {
         return notas;
+    }
+
+    public Estudiante setNotas(List<Nota> notas) {
+        this.notas = notas;
+        return this;
     }
 
     @Override

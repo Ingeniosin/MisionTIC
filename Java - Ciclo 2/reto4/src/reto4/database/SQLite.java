@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class SQLite implements Database<Connection>{
+public class SQLite implements Database<Connection> {
 
     private final String DATABASE_URL;
     private Connection connection;

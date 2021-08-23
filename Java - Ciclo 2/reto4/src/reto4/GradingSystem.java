@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
 
 public class GradingSystem {
 
-    private List<Estudiante> estudiantes;
-    private List<Materia> materias;
+    private final List<Estudiante> estudiantes;
+    private final List<Materia> materias;
 
     public GradingSystem(List<Estudiante> estudiantes, List<Materia> materias) {
         this.estudiantes = estudiantes;
@@ -37,8 +37,8 @@ public class GradingSystem {
         return estudiantes.stream().mapToInt(estudiante -> estudiante.getNotas().stream().filter(nota -> nota.getNota() <= 30).mapToInt(m -> 1).sum()).sum();
     }
 
-    public String stat3()  {
-        Map<Materia, DoubleSummaryStatistics> collect = materias.stream().collect(Collectors.groupingBy(materia -> materia,Collectors.summarizingDouble(value -> estudiantes.stream().mapToDouble(value1 -> value1.getNotas().stream().filter(nota -> nota.getMateria().equals(value)).mapToDouble(Nota::getNota).sum()).sum())));
+    public String stat3() {
+        Map<Materia, DoubleSummaryStatistics> collect = materias.stream().collect(Collectors.groupingBy(materia -> materia, Collectors.summarizingDouble(value -> estudiantes.stream().mapToDouble(value1 -> value1.getNotas().stream().filter(nota -> nota.getMateria().equals(value)).mapToDouble(Nota::getNota).sum()).sum())));
         return collect.entrySet().stream().max(Map.Entry.comparingByValue(Comparator.comparingDouble(DoubleSummaryStatistics::getSum))).orElseThrow().getKey().getNombre();
     }
 
@@ -46,7 +46,6 @@ public class GradingSystem {
         Predicate<Nota> fisicaFilter = nota -> nota.getMateria().getNombre().equals("fisica");
         return estudiantes.stream().filter(e -> e.getNotas().stream().anyMatch(fisicaFilter)).max(Comparator.comparingDouble(o -> o.getNotas().stream().filter(fisicaFilter).mapToDouble(Nota::getNota).sum())).orElseThrow().getNombre();
     }
-
 
 
 }

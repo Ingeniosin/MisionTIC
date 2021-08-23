@@ -6,10 +6,8 @@ import reto4.database.SQLite;
 import reto4.database.repository.EstudianteRepository;
 import reto4.database.repository.MateriaRepository;
 import reto4.database.repository.NotaRepository;
-import reto4.database.repository.Repository;
 import reto4.entity.Estudiante;
 import reto4.entity.Materia;
-import reto4.entity.Nota;
 import reto4.service.EstudianteService;
 import reto4.service.MateriaService;
 import reto4.service.NotaService;
@@ -17,9 +15,7 @@ import reto4.view.PrincipalScreen;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class App extends Application {
@@ -53,7 +49,7 @@ public class App extends Application {
             sqLite.getConnection().prepareStatement("PRAGMA foreign_keys=ON").execute();
             estudianteRepository = new EstudianteRepository(sqLite.getConnection(), "Estudiantes");
             materiaRepository = new MateriaRepository(sqLite.getConnection(), "Materia");
-            notaRepository = new NotaRepository(sqLite.getConnection(), "Notas", materiaRepository,  estudianteRepository);
+            notaRepository = new NotaRepository(sqLite.getConnection(), "Notas", materiaRepository, estudianteRepository);
 
             materiaService = new MateriaService(materiaRepository);
             notaService = new NotaService(notaRepository);

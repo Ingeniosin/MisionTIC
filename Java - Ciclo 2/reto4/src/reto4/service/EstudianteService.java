@@ -23,14 +23,14 @@ public class EstudianteService {
 
     public Estudiante getEstudiante(int id) throws SQLException {
         Estudiante estudiante = estudianteRepository.getById(id).orElse(null);
-        if(estudiante == null) return null;
+        if (estudiante == null) return null;
         estudiante.setNotas(notaService.getNotasOfStudent(estudiante));
         return estudiante;
     }
 
     public Estudiante getEstudiante(String name) throws SQLException {
         Estudiante estudiante = estudianteRepository.getByName(name).orElse(null);
-        if(estudiante == null) return null;
+        if (estudiante == null) return null;
         estudiante.setNotas(notaService.getNotasOfStudent(estudiante));
         return estudiante;
     }
@@ -38,7 +38,7 @@ public class EstudianteService {
     public void createOrUpdate(Estudiante estudiante) throws SQLException {
         Objects.requireNonNull(estudiante.getNotas(), "Las notas no pueden ser nulas");
         estudiante.setId(estudianteRepository.createOrUpdate(estudiante).getId());
-        if(!estudiante.getNotas().isEmpty()) {
+        if (!estudiante.getNotas().isEmpty()) {
             notaService.setNotasOfStudent(estudiante);
         }
 

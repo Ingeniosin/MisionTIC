@@ -1,9 +1,5 @@
 package reto4.entity;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
 public class Materia {
 
     private final String nombre;
@@ -12,7 +8,6 @@ public class Materia {
     public Materia(String nombre) {
         this.nombre = nombre;
     }
-
 
 
     public Materia(String nombre, int id) {

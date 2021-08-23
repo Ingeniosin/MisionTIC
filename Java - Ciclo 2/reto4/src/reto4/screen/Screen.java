@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 
-public abstract class Screen implements Controller{
+public abstract class Screen implements Controller {
     public static HashMap<String, Screen> screensAvailable = new HashMap<>();
     private final Stage stage;
     private Scene scene;
@@ -136,8 +136,8 @@ public abstract class Screen implements Controller{
 
     }
 
-    public  <T> T getChildByID(String id) {
-        return (T) scene.lookup("#"+id);
+    public <T> T getChildByID(String id) {
+        return (T) scene.lookup("#" + id);
     }
 
     public void onWindowShown() {

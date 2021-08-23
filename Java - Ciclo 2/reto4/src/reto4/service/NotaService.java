@@ -1,7 +1,6 @@
 package reto4.service;
 
 import reto4.database.repository.NotaRepository;
-import reto4.database.repository.Repository;
 import reto4.entity.Estudiante;
 import reto4.entity.Nota;
 
@@ -11,7 +10,7 @@ import java.util.Objects;
 
 public class NotaService {
 
-    private NotaRepository notaRepository;
+    private final NotaRepository notaRepository;
 
     public NotaService(NotaRepository notaRepository) {
         this.notaRepository = notaRepository;
